@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display-container">
+                <div class="history-display" id="history"></div>
+                <div class="main-display" id="display">0</div>
+            </div>
+            <div class="buttons">
+                <button class="function-btn" onclick="clearAll()">AC</button>
+                <button class="function-btn" onclick="backspace()">⌫</button>
+                <button class="function-btn" onclick="toggleSign()">±</button>
+                <button class="operator-btn" onclick="appendOperator('/')">÷</button>
+                
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button class="operator-btn" onclick="appendOperator('*')">×</button>
+                
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button class="operator-btn" onclick="appendOperator('-')">-</button>
+                
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button class="operator-btn" onclick="appendOperator('+')">+</button>
+                
+                <button class="span-2" onclick="appendNumber('0')">0</button>
+                <button onclick="appendDecimal()">.</button>
+                <button class="operator-btn" onclick="calculate()">=</button>
+            </div>
+        </div>
+        
+        <div class="history-panel">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <button class="clear-history" onclick="clearHistory()">Clear</button>
+            </div>
+            <div class="history-items" id="historyItems"></div>
+        </div>
+    </div>
+
+    <script src="history.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
